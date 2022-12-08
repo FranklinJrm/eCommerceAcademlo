@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academlo Store</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <div id="loader" class="loader">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="loader--img">
+            <title>Academlo Logo</title>
+            <g>
+                <g>
+                    <path
+                    d="M24.45,56.48,0,42.36V14.12L24.46,0,48.92,14.12V42.36ZM1.89,41.26l22.56,13L47,41.26v-26l-22.56-13-22.56,13Z">
+                    </path>
+                    <path
+                    d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+                    </path>
+                </g>
+            </g>
+        </svg>
+    </div>
+    <header>
+        <nav class="before">
+            <div class="logo-nav">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48">
+                <title>Academlo Logo</title>
+                <g>
+                <g>
+                    <path
+                    d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+                    </path>
+                </g>
+                </g>
+                </svg>
+                <p>STORE</p>
+            </div>
+            <div class="menu-back">
+            <div class="menu--container">
+                    <div id="contain-home"><a href="#">Home</a></div>
+                    <div><a href="#section--submenu">Products</a></div>
+            </div>
+            </div>
+        
+            <div class="dark--mode--icon">
+                <i class='bx bx-moon bx-sm' id="theme-btn"></i>
+            </div>
+            <div id="cart-shop" class="nav--cart">
+                <i class='bx bx-shopping-bag bx-sm'></i>
+                <span id="cart-counter" class="counter"><span id="cart_quantity">0</span></span>
+            </div>
+            <div class="grid--icon">
+                <i class='bx bx-menu bx-sm' id="btn-menu"></i> 
+                
+            </div>
+            <div class="cart--container hide" id="cart-container">
+                <div class="cart" id="cart_1">
+                    <div id="produc-selec">
+                        <div class="cart--empty" >
+                            <h3 class="cart--title">My Cart</h3>
+                            <div class="cart--hide hide">
+                                <img src="./assets/images/empty-cart.png">
+                                <h2 class="cart--text--h2">Your cart is empty</h2>
+                                <span class="cart--span">You can add items to your cart by clicking on the '+' button on the product page.</span> 
+                            </div>
+                            <div class="cart--items">
+                                <spam class="cart--count"> 0 Items<span>
+                                <spam class="cart--price"> $0.00 Items<span>
+                            </div>
+                            <div class="cart--btn">
+                                <button class="btn-checkout"> <i class='bx bxs-check-shield'></i> Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="total">
+                    </div>
+                    <div class="close--cart">
+                        <i class='bx bx-x' id="close-cart"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>   
+        
+    </header>
+    <section class="banner">
+        <div class="banner--img--container">
+            <img src="./assets/images/home.png" alt="">
+        </div>
+        
+    </section>
+    <main>
+        <section class="main--description">
+            <h1>New Sweatshirt</h1>
+            <h4>COLLECTIONS 2022</h4>
+            <p>Lastest arrival of the new Hares Midweight Crewneck sweatshit imported from the 2022 series, with a modern design.</p>
+            <p class="price">$14.00</p>
+            <div class="btn--container--main" id="4">
+                <button class="btn--discover--main">Discover</button>
+                <button class="btn-add btn--add--main">ADD TO CART</button>
+            </div>
+        </section> 
+        <section id="section--submenu" class="section--submenu">
+                   <div class="submenu--row">
+                    <div onclick="showProductsFiltered('all')" class="submenu--col">
+                        <h4>Show All</h4>
+                        <p>show all products</p>
+                    </div>
+                    <div class="submenu--col-line"></div>
+                    <div onclick="showProductsFiltered('Hoodies')" class="submenu--col">
+                        <h4>Hoodies</h4>
+                        <p>3 products</p>
+                    </div>
+                    <div class="submenu--col-line"></div>
+                    <div onclick="showProductsFiltered('Shirts')" class="submenu--col">
+                        <h4>Shirts</h4>
+                        <p>4 products</p>
+                    </div>
+                    <div class="submenu--col-line"></div>
+                    <div onclick="showProductsFiltered('Sweatshirts')" class="submenu--col">
+                        <h4>Sweatshirts</h4>
+                        <p>4 products</p>
+                    </div>
+                  </div>
+
+        </section>
+        <section id="products-list">
+        </section>
+    </main>
+    <footer>
+        <div class="footer--container">
+            <div class="footer--section--wrapper">
+                <div class="footer--section">
+                    <h2 class="footer--category">Our Information</h2>
+                    <ul class="footer--list">
+                        <li>
+                            <a href="" class="footer--link">Toluca, México</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer--section">
+                    <h2 class="footer--category">About Us</h2>
+                    <ul class="footer--list">
+                        <li>
+                            <a href="" class="footer--link">Support Center</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer--link">Customer Support</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer--link">About Us</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer--link">Copy Right</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer--section">
+                    <h2 class="footer--category">Product</h2>
+                    <ul class="footer--list">
+                        <li>
+                            <div onclick="showProductsFiltered('Hoodies')"  class="footer-div-link">Hoodies</div>
+                        </li>
+                        <li>
+                            <div onclick="showProductsFiltered('Shirts')" class="footer-div-link">Shirts</div>
+                        </li>
+                        <li>
+                            <div onclick="showProductsFiltered('Sweatshirts')" class="footer-div-link">Sweatshirts</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer--section">
+                    <h2 class="footer--category">Social</h2>
+                    <ul class="footer--social">
+                        <li>
+                            <a href="" class="footer--social--icon"><i class='bx bxl-facebook bx-sm'></i></a>
+                        </li>
+                        <li>
+                            <a href="" class="footer--social--icon"><i class='bx bxl-twitter bx-sm'></i></a>
+                        </li>
+                        <li>
+                            <a href="" class="footer--social--icon"><i class='bx bxl-instagram bx-sm'></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+                <p class="footer--copyright">&copy; ACADEMLO all rights reserved</p>
+            <div class="academlo">
+                <p>Hecho con <span><i class='bx bxs-heart'></i></span> en Academlo</p>
+            </div>
+            
+    </footer>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
